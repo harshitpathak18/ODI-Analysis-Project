@@ -127,7 +127,7 @@ if menu=="BATTING":
     Country_Wise=helper.Country_Wise_batting(df)
     choice=st.selectbox("Select Options",("Runs","100s","50s"))
     fig = px.bar(Country_Wise, x='Country', y=choice)
-    fig.update_traces(marker_color='blue')
+    
     st.plotly_chart(fig)
 
     # Player's Batting Stat
@@ -182,7 +182,7 @@ if menu=="BOWLING":
     Country_Wise=helper.Country_Wise_bowling(df)
     choice=st.selectbox("Select Options",("Wickets","4 Wickets","5 Wickets"))
     fig = px.bar(Country_Wise, x='Country', y=choice)
-    fig.update_traces(marker_color='blue')
+    
     st.subheader(f"Country-wise Total {choice}")
     st.plotly_chart(fig)
 
