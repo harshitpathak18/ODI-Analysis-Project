@@ -24,7 +24,8 @@ def country_played_over_years(df,country):
 
 def win_loss(df):
     new_df=df['Winner'].value_counts().reset_index()
-    new_df=new_df.rename(columns={"index":"Country","Winner":"Won"})
+    new_df.columns=['Country','Won']
+    # new_df=new_df.rename(columns={"index":"Country","Winner":"Won"})
     new_df=new_df.sort_values(by="Country")
     
     l=country_list(df)
